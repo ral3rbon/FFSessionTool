@@ -12,8 +12,13 @@ If you’re a professional developer: See this as a "Try not to laugh challenge"
 
 The comments are a mix of languages, so don’t be surprised if you see German text. (My commenting skills also need improvement—before Git, I used to add useless comments like "NEU!", "NEW!", and other pointless statements, hoping not to lose track. Spoiler: It didn’t help.)
 
+Join me on my Journey! If you like the app (or at least the idea), I would appreciate your support:
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/U7U41M4Z2E)
+
 
 ## What is this magnificent beast?
+
+![Screenshot of dark and lightmode of the app](https://rd-an.de/dark-light_ffsm.jpg)
 
 This application was born from the frustration of having too many tabs open and not enough organization. 
 At the beginning i had written 3 seperate Tools. One for saving groups in seperated .csv's, one that extracts data with xpath and one that creates custom Urls for JDownloader... 
