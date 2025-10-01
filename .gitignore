@@ -1,0 +1,16 @@
+bookmarks.html
+.DS_Store
+.github/copilot-instructions.md
+.vscode/
+user_data/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.pot
+*.mo
+*.py,cover

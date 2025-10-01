@@ -1,0 +1,445 @@
+{
+  "Addon_History": {
+    "No History available.": "No History available."
+  },
+  "Addon_Xpath": {
+    "+ Add Tag": "+ Add Tag",
+    "Add New Tag": "Add New Tag",
+    "Enter the new tag value:": "Enter the new tag value:",
+    "Label Title": "Label Title",
+    "Manually add a new tag": "Manually add a new tag",
+    "No extracted data available.": "No extracted data available.",
+    "Value Content": "Value Content"
+  },
+  "Bookmarks": {
+    "Export Bookmarks": "Export Bookmarks",
+    "No Window Selected - Please select at least one window to export": "No Window Selected - Please select at least one window to export",
+    "Please specify a filename": "Please specify a filename",
+    "Save Bookmarks as": "Save Bookmarks as",
+    "Save as": "Save as",
+    "Select Window(s) to export": "Select Window(s) to export",
+    "Use Groups as Folders": "Use Groups as Folders"
+  },
+  "ClosedTabs": {
+    "Closed Groups": "Closed Groups",
+    "Closed Tabs": "Closed Tabs",
+    "Closed Windows": "Closed Windows",
+    "No Title": "No Title",
+    "Saved Groups": "Saved Groups",
+    "Tabs": "Tabs",
+    "Ungrouped": "Ungrouped",
+    "Unnamed Group": "Unnamed Group",
+    "Window": "Window",
+    "Window closed at": "Window closed at",
+    "closed": "closed",
+    "closed at": "closed at",
+    "last accessed": "last accessed",
+    "tabs": "tabs"
+  },
+  "GUI": {
+    "Error History Tab: {0}": "Error History Tab: {0}"
+  },
+  "General": {
+    "Open in Browser": "Open in Browser",
+    "Save Changes": "Save Changes",
+    "Save Session as JSON": "Save Session as JSON",
+    "coming soon...": "coming soon...",
+    "string": "string"
+  },
+  "Groups": {
+    "Ungrouped": "Ungrouped"
+  },
+  "MessageBox": {
+    "Could not replace Session": "Could not replace Session",
+    "Error": "Error",
+    "Error copying files:\\n{0}": "Error copying files:\\n{0}",
+    "Something went (terrible) Wrong": "Something went (terrible) Wrong"
+  },
+  "MessageBox_err": {
+    "Copy Error": "Copy Error",
+    "Error writing the file: {0}": "Error writing the file: {0}",
+    "There is an error: {0}": "There is an error: {0}"
+  },
+  "MessageBox_quest": {
+    "Confirm Overwrite": "Confirm Overwrite",
+    "You are about to overwrite the session file": "You are about to overwrite the session file"
+  },
+  "MessageBox_warn": {
+    "No Profile information found.\\nThe Session is only saved in the backup folder.": "No Profile information found.\\nThe Session is only saved in the backup folder.",
+    "No write permissions for the Firefox profile.": "No write permissions for the Firefox profile.",
+    "Please close Firefox completely and try again.": "Please close Firefox completely and try again.",
+    "Unkown Profile information.": "Unkown Profile information."
+  },
+  "Messages": {
+    "Could not create path folder:\\\\n{0}": "Could not create path folder:\\\\n{0}",
+    "Error": "Error"
+  },
+  "Raise": {
+    "Invalid jsonlz4 file header": "Invalid jsonlz4 file header"
+  },
+  "ReplaceSession": {
+    "1. Open Firefox and go to Settings (about:preferences)": "1. Open Firefox and go to Settings (about:preferences)",
+    "4. Close Firefox completely": "4. Close Firefox completely",
+    "Cancel": "Cancel",
+    "Choose Restore Type": "Choose Restore Type",
+    "Choose how to restore the session:": "Choose how to restore the session:",
+    "Current Session": "Current Session",
+    "Do you want to continue anyway?": "Do you want to continue anyway?",
+    "Done!": "Done!",
+    "Existing file": "Existing file",
+    "File Age Warning": "File Age Warning",
+    "Firefox Settings Screenshot:": "Firefox Settings Screenshot:",
+    "Firefox Startup Configuration": "Firefox Startup Configuration",
+    "Firefox is not configured to restore the previous session on startup": "Firefox is not configured to restore the previous session on startup",
+    "Imported session": "Imported session",
+    "Please follow these steps:": "Please follow these steps:",
+    "Previous Session": "Previous Session",
+    "Recommended": "Recommended",
+    "Recovery Session": "Recovery Session",
+    "Screenshot could not be loaded": "Screenshot could not be loaded",
+    "Screenshot not available": "Screenshot not available",
+    "The existing file is newer than the imported session": "The existing file is newer than the imported session",
+    "To work properly, Firefox needs to be set to restore the previous session on startup.": "To work properly, Firefox needs to be set to restore the previous session on startup."
+  },
+  "Tools": {
+    "Invalid RegEx: {0}": "Invalid RegEx: {0}",
+    "No duplications found": "No duplications found"
+  },
+  "debug": {
+    "Removed invalid file from recent files": "Removed invalid file from recent files",
+    "Removing invalid recent file": "Removing invalid recent file"
+  },
+  "debug_addon": {
+    "... but be careful when editing the JSON directly!": "... but be careful when editing the JSON directly!",
+    "Field": "Field",
+    "No debug data available": "No debug data available",
+    "Save JSON Changes": "Save JSON Changes",
+    "Save changes made in the debug fields back to the JSON object.": "Save changes made in the debug fields back to the JSON object.",
+    "Show the raw JSON data of the selected tab/group/window.": "Show the raw JSON data of the selected tab/group/window.",
+    "URL Field": "URL Field",
+    "Useful for debugging or manual manipulation.": "Useful for debugging or manual manipulation."
+  },
+  "dialog": {
+    "Add/Edit Rule": "Add/Edit Rule",
+    "All Domains": "All Domains",
+    "All URL Contains": "All URL Contains",
+    "Clear": "Clear",
+    "Cover": "Cover",
+    "Delete": "Delete",
+    "Domain, Name, and XPath are required.": "Domain, Name, and XPath are required.",
+    "Domain:": "Domain:",
+    "Error": "Error",
+    "Filter": "Filter",
+    "Filter Rules": "Filter Rules",
+    "Global": "Global",
+    "Is Filter": "Is Filter",
+    "Is Global": "Is Global",
+    "Is Image": "Is Image",
+    "Name": "Name",
+    "Name:": "Name:",
+    "No rule selected.": "No rule selected.",
+    "Priority": "Priority",
+    "Rule": "Rule",
+    "Save": "Save",
+    "Select Target Directory": "Select Target Directory",
+    "Settings": "Settings",
+    "URL Contains:": "URL Contains:",
+    "Update": "Update",
+    "XPath Rule Editor": "XPath Rule Editor",
+    "XPath:": "XPath:"
+  },
+  "error": {
+    "Could not determine domain.": "Could not determine domain.",
+    "Could not find rule ID for label: {0}": "Could not find rule ID for label: {0}",
+    "Could not find tab ID for the current URL.": "Could not find tab ID for the current URL.",
+    "Could not parse import date": "Could not parse import date",
+    "Could not save file": "Could not save file",
+    "Database Error": "Database Error",
+    "Error": "Error",
+    "Error displaying session data.": "Error displaying session data.",
+    "Error extracting domain": "Error extracting domain",
+    "Error extracting path": "Error extracting path",
+    "Error finding Firefox profiles directory": "Error finding Firefox profiles directory",
+    "Error generating URL hash": "Error generating URL hash",
+    "Error in populate_group_and_tabs": "Error in populate_group_and_tabs",
+    "Error moving tab between windows": "Error moving tab between windows",
+    "Error opening recent files dialog": "Error opening recent files dialog",
+    "Error opening recent files.": "Error opening recent files.",
+    "Error overwriting session file": "Error overwriting session file",
+    "Error removing file from recent files": "Error removing file from recent files",
+    "Error replacing session files": "Error replacing session files",
+    "Error updating Json item data": "Error updating Json item data",
+    "Error updating recent files": "Error updating recent files",
+    "Error updating tab data": "Error updating tab data",
+    "Error: Could not determine source window": "Error: Could not determine source window",
+    "Error: Could not determine target window": "Error: Could not determine target window",
+    "Error: Target group does not exist in destination window": "Error: Target group does not exist in destination window",
+    "Failed to load session file": "Failed to load session file",
+    "Failed to open URL in browser": "Failed to open URL in browser",
+    "Failed to process extracted data": "Failed to process extracted data",
+    "Failed to process image extraction results.": "Failed to process image extraction results.",
+    "Failed to save tag to database: {0}": "Failed to save tag to database: {0}",
+    "Failed to start image downloads": "Failed to start image downloads",
+    "Failed to start image downloads.": "Failed to start image downloads.",
+    "Failed to start scraping": "Failed to start scraping",
+    "Failed to start scraping.": "Failed to start scraping.",
+    "File does not exist": "File does not exist",
+    "No Firefox profiles folder found.": "No Firefox profiles folder found.",
+    "No URL hash available.": "No URL hash available.",
+    "No active session or URL found.": "No active session or URL found.",
+    "No file path provided.": "No file path provided.",
+    "No files found": "No files found",
+    "No permission to read file.": "No permission to read file.",
+    "No read permission for file": "No read permission for file",
+    "No session file loaded to export": "No session file loaded to export",
+    "No target directory selected.": "No target directory selected.",
+    "Selected file does not exist (anymore).": "Selected file does not exist (anymore).",
+    "Session file appears to be corrupted": "Session file appears to be corrupted",
+    "Tab URL missing.": "Tab URL missing.",
+    "Unexpected error loading file": "Unexpected error loading file",
+    "Unexpected error loading session": "Unexpected error loading session",
+    "Unexpected type for last entry": "Unexpected type for last entry"
+  },
+  "history_addon": {
+    "... but i will try to find the Origin if any": "... but i will try to find the Origin if any",
+    "... but it will try to find the Origin if any": "... but it will try to find the Origin if any",
+    "Show the browsing history of the selected tab.": "Show the browsing history of the selected tab."
+  },
+  "info": {
+    "Session saved as JSON successfully.": "Session saved as JSON successfully.",
+    "You Cancelled": "You Cancelled",
+    "You cancelled": "You cancelled"
+  },
+  "load_profile": {
+    "Choose a profile to copy session files from.": "Choose a profile to copy session files from.",
+    "File not Found.": "File not Found.",
+    "Last modified": "Last modified",
+    "No Files": "No Files",
+    "No files found to process in this profile.": "No files found to process in this profile.",
+    "Select Firefox Profile": "Select Firefox Profile",
+    "Size": "Size"
+  },
+  "main": {
+    "Cancel": "Cancel",
+    "Closed Tabs / Saved Groups": "Closed Tabs / Saved Groups",
+    "Closed at:": "Closed at:",
+    "Debug": "Debug",
+    "Delete Selected Tab": "Delete Selected Tab",
+    "Delete the selected Tab or Group from the Session": "Delete the selected Tab or Group from the Session",
+    "Filter Tabs (Title, URL or url_hash)...": "Filter Tabs (Title, URL or url_hash)...",
+    "Group:": "Group:",
+    "Hidden": "Hidden",
+    "Hidden Tabs": "Hidden Tabs",
+    "Hide Closed Tabs": "Hide Closed Tabs",
+    "History": "History",
+    "Last Accessed:": "Last Accessed:",
+    "No Title": "No Title",
+    "No XPath rules found for this domain.": "No XPath rules found for this domain.",
+    "No XPath rules found for this domain/path.": "No XPath rules found for this domain/path.",
+    "No extracted data found. Applying image rules directly...": "No extracted data found. Applying image rules directly...",
+    "No image URLs found in extraction results.": "No image URLs found in extraction results.",
+    "No image available": "No image available",
+    "No image rules found for this domain.": "No image rules found for this domain.",
+    "No tab selected.": "No tab selected.",
+    "No unique image URLs found in extraction.": "No unique image URLs found in extraction.",
+    "No unique image URLs found.": "No unique image URLs found.",
+    "Pinned": "Pinned",
+    "Pinned Tabs": "Pinned Tabs",
+    "Please select a tab.": "Please select a tab.",
+    "Saved": "Saved",
+    "Session Replaced": "Session Replaced",
+    "Session Tabs": "Session Tabs",
+    "Show Closed Tabs": "Show Closed Tabs",
+    "Show/Hide Closed Tabs from the Session": "Show/Hide Closed Tabs from the Session",
+    "Started Playwright extraction…": "Started Playwright extraction…",
+    "Started Requests extraction…": "Started Requests extraction…",
+    "Starting download of {0} images from existing data...": "Starting download of {0} images from existing data...",
+    "Starting download of {0} images from extraction...": "Starting download of {0} images from extraction...",
+    "Successfully loaded session with {0} active tabs (and {1} Closed tabs)": "Successfully loaded session with {0} active tabs (and {1} Closed tabs)",
+    "Successfully loaded session with {0} tabs": "Successfully loaded session with {0} tabs",
+    "Tab": "Tab",
+    "Tab URL updated.": "Tab URL updated.",
+    "Tab group updated.": "Tab group updated.",
+    "Tab title updated.": "Tab title updated.",
+    "Tabs": "Tabs",
+    "Tags": "Tags",
+    "Title:": "Title:",
+    "URL:": "URL:",
+    "Ungrouped": "Ungrouped",
+    "Window": "Window",
+    "Yes": "Yes",
+    "You Cancelled": "You Cancelled"
+  },
+  "menu_btn": {
+    "Import Current Session": "Import Current Session",
+    "Load Recent Session": "Load Recent Session",
+    "Replace Session File": "Replace Session File",
+    "Save Changes": "Save Changes",
+    "Save as JSON": "Save as JSON",
+    "Settings": "Settings"
+  },
+  "menu_checkbox": {
+    "Apply Regex:": "Apply Regex:",
+    "By Title": "By Title",
+    "By URL": "By URL",
+    "Keep Groups": "Keep Groups"
+  },
+  "menu_input": {
+    "Enter Regex...": "Enter Regex..."
+  },
+  "menu_label": {
+    "Filter Duplicates": "Filter Duplicates",
+    "Plugins": "Plugins",
+    "Tools": "Tools"
+  },
+  "menu_tooltip": {
+    "Enable/Disable usage of Regex Filtering": "Enable/Disable usage of Regex Filtering",
+    "Enter a Regular Expression to filter the tabs": "Enter a Regular Expression to filter the tabs",
+    "Import directly from Firefox Profiles Folder": "Import directly from Firefox Profiles Folder",
+    "Keep the Tab Groups (Containers) when filtering duplicates": "Keep the Tab Groups (Containers) when filtering duplicates",
+    "Load one of already Imported Sessions.": "Load one of already Imported Sessions.",
+    "Open Settings Dialog, obviously": "Open Settings Dialog, obviously",
+    "Save current Regex input": "Save current Regex input",
+    "Save current state and replace File in the Profile Folder": "Save current state and replace File in the Profile Folder",
+    "Save current state of the data in decompiled json format": "Save current state of the data in decompiled json format"
+  },
+  "plugins_btn": {
+    "Edit XPath Rules": "Edit XPath Rules",
+    "Load Missing Images": "Load Missing Images",
+    "Show Extended URLs": "Show Extended URLs"
+  },
+  "plugins_tooltip": {
+    "Load missing Images with XPath": "Load missing Images with XPath",
+    "Opens the XPath Rules Editor": "Opens the XPath Rules Editor",
+    "Show saved Extended URLs with all parameters": "Show saved Extended URLs with all parameters"
+  },
+  "recent_files_dialog": {
+    "... outside of the profile location": "... outside of the profile location",
+    "Failed to read profile information": "Failed to read profile information",
+    "Failed to read profile information.": "Failed to read profile information.",
+    "File not found": "File not found",
+    "Import single *.JsonLz4 File...": "Import single *.JsonLz4 File...",
+    "Last imported sessions:": "Last imported sessions:",
+    "Open Recent Project File": "Open Recent Project File",
+    "Select Single JsonLz4 File": "Select Single JsonLz4 File",
+    "Selected file": "Selected file",
+    "The selected file does not exist.": "The selected file does not exist.",
+    "not found": "not found"
+  },
+  "select_file_dialog": {
+    "Last modified": "Last modified",
+    "Select Session File to Open": "Select Session File to Open",
+    "Select which session file to open:": "Select which session file to open:",
+    "Size": "Size"
+  },
+  "session_helper": {
+    "Invalid restore type selected": "Invalid restore type selected",
+    "Invalid restore type selected.": "Invalid restore type selected."
+  },
+  "session_loader": {
+    "Database error": "Database error",
+    "Database error while loading session": "Database error while loading session",
+    "Failed to generate URL hash for tab": "Failed to generate URL hash for tab",
+    "Failed to get/create session ID for": "Failed to get/create session ID for",
+    "Failed to load session": "Failed to load session",
+    "Failed to parse session data - empty result": "Failed to parse session data - empty result",
+    "Generated URL hash for tab": "Generated URL hash for tab",
+    "Invalid tabs data format": "Invalid tabs data format",
+    "No read permission for file": "No read permission for file",
+    "Session file does not exist": "Session file does not exist",
+    "Successfully loaded {0} tabs from {1} groups": "Successfully loaded {0} tabs from {1} groups",
+    "Unexpected error loading session file": "Unexpected error loading session file"
+  },
+  "session_parser": {
+    "Group": "Group",
+    "No data are loaded": "No data are loaded",
+    "Session data loaded successfully.": "Session data loaded successfully.",
+    "Session data not loaded.": "Session data not loaded.",
+    "Ungrouped": "Ungrouped",
+    "Without Title": "Without Title"
+  },
+  "session_parser_error": {
+    "Failed to decompress session data": "Failed to decompress session data",
+    "Failed to decompress session data.": "Failed to decompress session data.",
+    "Failed to parse session data": "Failed to parse session data",
+    "Failed to parse session data.": "Failed to parse session data.",
+    "Failed to save session data": "Failed to save session data",
+    "Failed to save session data.": "Failed to save session data.",
+    "Invalid jsonLz4 file format": "Invalid jsonLz4 file format",
+    "Session data not loaded.": "Session data not loaded.",
+    "Session file not found:": "Session file not found:",
+    "Unexpected error loading session data": "Unexpected error loading session data"
+  },
+  "session_populator": {
+    "Error populating session tree": "Error populating session tree",
+    "Error processing favicon for": "Error processing favicon for",
+    "Failed to load cached favicon for": "Failed to load cached favicon for",
+    "Failed to load pixmap from base64 data for": "Failed to load pixmap from base64 data for"
+  },
+  "settings": {
+    "Accept": "Accept",
+    "Accept-Encoding": "Accept-Encoding",
+    "Accept-Language": "Accept-Language",
+    "Close": "Close",
+    "Connection": "Connection",
+    "Enable XPath Plugin": "Enable XPath Plugin",
+    "Favicon Cache Directory": "Favicon Cache Directory",
+    "Image Cache Directory": "Image Cache Directory",
+    "Language": "Language",
+    "Save": "Save",
+    "Scraping Engine": "Scraping Engine",
+    "Sec-Fetch-Dest": "Sec-Fetch-Dest",
+    "Sec-Fetch-Mode": "Sec-Fetch-Mode",
+    "Sec-Fetch-Site": "Sec-Fetch-Site",
+    "Sec-Fetch-User": "Sec-Fetch-User",
+    "Theme": "Theme",
+    "Timezone": "Timezone",
+    "Upgrade-Insecure-Requests": "Upgrade-Insecure-Requests",
+    "User-Agent": "User-Agent"
+  },
+  "statusbar": {
+    "Loading session...": "Loading session...",
+    "Ready": "Ready"
+  },
+  "success": {
+    "New tag has been saved.": "New tag has been saved.",
+    "Success": "Success"
+  },
+  "tools_btn": {
+    "Export as Bookmarks": "Export as Bookmarks",
+    "Group Editor": "Group Editor",
+    "Title Cleaner": "Title Cleaner"
+  },
+  "tools_tooltip": {
+    "Export Bookmarks from the current loaded Session": "Export Bookmarks from the current loaded Session",
+    "Open Group Editor": "Open Group Editor",
+    "Open Title Cleaner Dialog": "Open Title Cleaner Dialog"
+  },
+  "utils": {
+    "Error at extracting domain:": "Error at extracting domain:",
+    "Error finding Firefox profiles directory": "Error finding Firefox profiles directory"
+  },
+  "warning": {
+    "Error with recent file path.": "Error with recent file path.",
+    "Failed to convert to local timezone": "Failed to convert to local timezone",
+    "Failed to format timestamp": "Failed to format timestamp",
+    "Failed to get session ID for": "Failed to get session ID for",
+    "Failed to get timezone from settings": "Failed to get timezone from settings",
+    "Invalid recent file path": "Invalid recent file path",
+    "No profiles selected.": "No profiles selected.",
+    "No session data loaded to export.": "No session data loaded to export.",
+    "Tab with no entries found, skipping": "Tab with no entries found, skipping"
+  },
+  "worker": {
+    "Extracted and saved {0} data entries": "Extracted and saved {0} data entries",
+    "Extraction done": "Extraction done",
+    "Image downloaded and saved": "Image downloaded and saved",
+    "Text extraction completed": "Text extraction completed"
+  },
+  "xpath_addon": {
+    "Load Images": "Load Images",
+    "Scrape Group": "Scrape Group",
+    "Scrape URL": "Scrape URL",
+    "Scrape Window": "Scrape Window"
+  }
+}

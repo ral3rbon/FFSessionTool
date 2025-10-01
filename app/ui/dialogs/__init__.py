@@ -1,0 +1,7 @@
+from .fh_open_recent import OpenRecentProjectFileDialog
+from .fh_ffprofiles import FFProfileSelectionDialog, FileSelectionDialog
+from .ff_settings_howto import FirefoxConfigDialog
+from .export_bookmarks import ExportBookmarksDialog
+from .title_cleaner import TitleCleanerDialog
+from .group_editor import GroupEditor
+from .xpath_rule_editor import XPathRuleEditorDialog
