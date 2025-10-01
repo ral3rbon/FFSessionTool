@@ -60,7 +60,8 @@ class RightColumnWidget(QWidget):
         self.set_closed_at_visible(False)
 
         self.btn_delete = QPushButton(icon=load_icon("trash"), text=tr("Delete Selected Tab", "main"))
-        self.btn_delete.setToolTip(tr("Delete the selected Tab or Group from the Session", "main"))
+        self.btn_delete.setToolTip(tr("coming soon..."))
+        #self.btn_delete.setToolTip(tr("Delete the selected Tab or Group from the Session", "main"))
         self.btn_delete.setEnabled(False)  # Disabled until a tab/group is selected
 
 
@@ -157,12 +158,11 @@ class RightColumnWidget(QWidget):
         self.its_debug_scroll.setWidget(self.its_debug_container)
         self.its_debug_layout.addWidget(self.its_debug_scroll)
 
-        # --- NEU: Speichern-Button für Debug-Tab ---
         self.debug_save_btn = QPushButton(tr("Save JSON Changes", "debug_addon"))
         self.debug_save_btn.setToolTip(tr("Save changes made in the debug fields back to the JSON object.", "debug_addon"))
         self.debug_save_btn.clicked.connect(self._on_debug_save_clicked)
         self.its_debug_layout.addWidget(self.debug_save_btn, alignment=Qt.AlignRight)
-        # --- ENDE NEU ---
+
 
         self.infotainmentsystem.addTab(self.its_his, tr("History", "main"))
         self.infotainmentsystem.addTab(self.its_tags, tr("Tags", "main"))

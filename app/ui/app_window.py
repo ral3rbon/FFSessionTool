@@ -218,7 +218,7 @@ class FFsessionToolMainWindow(QMainWindow):
         self.lcw.dup_title_cb.stateChanged.connect(self.utils_helper.find_duplicates)
         self.lcw.dup_url_cb.stateChanged.connect(self.utils_helper.find_duplicates)
         self.lcw.regex_input.currentTextChanged.connect(self.utils_helper.find_duplicates)
-        # self.lcw.save_regex_btn.clicked.connect(self.save_regex)
+        self.lcw.save_regex_btn.clicked.connect(self.save_regex)
         self.lcw.dup_keep_group.stateChanged.connect(self.utils_helper.find_duplicates)
         self.lcw.regex_checkbox.stateChanged.connect(self.utils_helper.find_duplicates)
          
@@ -233,11 +233,11 @@ class FFsessionToolMainWindow(QMainWindow):
         self.ccw.filter_input.textChanged.connect(self.utils_helper.apply_search_filter)
         self.ccw.closed_session_widget.itemSelectionChanged.connect(self._on_closed_item_selected)
 
-        # self.rcw.btn_update_title.clicked.connect(self.fetch_title_from_url)
+        # self.rcw.btn_update_title.clicked.connect(self.fetch_title_from_url) # Coming soon...
         self.rcw.title_edit.editingFinished.connect(self.update_data_from_ui)
         self.rcw.url_edit.editingFinished.connect(self.update_data_from_ui)
         self.rcw.group_combo.currentIndexChanged.connect(self.update_data_from_ui)
-        # self.rcw.btn_delete.clicked.connect(self.delete_selected_item)
+        # self.rcw.btn_delete.clicked.connect(self.delete_selected_item) # Coming soon...
 
         # self.rcw.xph_scrape_group_btn.clicked.connect(self.xpath_handler.on_process_group_clicked)
         # self.rcw.xph_scrape_window_btn.clicked.connect(self.xpath_handler.on_process_window_clicked)
@@ -247,15 +247,13 @@ class FFsessionToolMainWindow(QMainWindow):
         # Theme change signal
         theme_manager.theme_changed.connect(self.on_theme_changed)
 
-        # self.load_regexes() # Load saved regexes from settingsfile
-        pass
+        self.load_regexes() # Load saved regexes from settingsfile
 
     def update_theme(self):
         bg_color = get_theme_color_hex("background")
         text_color = get_theme_color_hex("text")
 
     def on_theme_changed(self):
-        #TODO: Auto Update Theme dosn't work yet
         self.update_theme()
 
     # == session / UI related functions ==
@@ -407,7 +405,7 @@ class FFsessionToolMainWindow(QMainWindow):
                 self.rcw.load_image_button.setVisible(False)
                 self.rcw.image_frame.setVisible(False) # Maybe for previewing 4 images in 2x2 grid?
 
-                self.rcw.btn_delete.setEnabled(False)
+                #self.rcw.btn_delete.setEnabled(False)
                 self.rcw.xph_scrape_group_btn.setEnabled(True)
                 self.selected_group = item
                 self.selected_window = None
@@ -418,7 +416,7 @@ class FFsessionToolMainWindow(QMainWindow):
                 self.rcw.load_image_button.setVisible(False)
                 self.rcw.image_frame.setVisible(False) # Maybe for previewing 4 images in 2x2 grid?
 
-                self.rcw.btn_delete.setEnabled(False)
+                #self.rcw.btn_delete.setEnabled(False)
                 self.rcw.xph_scrape_window_btn.setEnabled(True)
                 self.selected_window = item
                 self.selected_group = None
@@ -429,7 +427,7 @@ class FFsessionToolMainWindow(QMainWindow):
                 self.rcw.load_image_button.setVisible(True)
                 self.rcw.image_frame.setVisible(True)
 
-                self.rcw.btn_delete.setEnabled(True)
+                #self.rcw.btn_delete.setEnabled(True)
                 self.rcw.xph_scrape_url_btn.setEnabled(True)
                 self.selected_group = None
                 self.selected_window = None
@@ -1824,3 +1822,23 @@ class FFsessionToolMainWindow(QMainWindow):
         from app.ui.dialogs.settings_dialog import SettingsDialog
         dlg = SettingsDialog(self.settings, self)
         dlg.exec()
+
+    def save_regex(self):
+        current_text = self.lcw.regex_input.currentText()
+        if current_text:
+            if self.lcw.regex_input.findText(current_text) == -1:
+                self.lcw.regex_input.addItem(current_text)
+
+            regex_list = [self.lcw.regex_input.itemText(i) for i in range(self.lcw.regex_input.count())]
+            self.settings.set("RegEx/regex_list", regex_list)
+
+    def load_regexes(self):
+        regex_list = self.settings.get("RegEx/regex_list", [])
+        if isinstance(regex_list, str):
+            regex_list = [regex_list]
+        if not regex_list:
+            self.lcw.regex_input.addItems([r"(https?://[^/]+)/(?:[a-zA-Z]{2}/)?(videos)/(\d+)/(.*)"])
+            pass
+        else:
+            self.lcw.regex_input.addItems(regex_list)
+        pass

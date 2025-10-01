@@ -63,8 +63,8 @@ class StartupScreen(QDialog):
             ("lz4", "lz4", "LZ4 compression library for Firefox session files", "required"),
             ("requests", "requests", "HTTP library for web requests", "xpath"),
             ("lxml", "lxml", "XML/HTML parsing library", "xpath"),
-            ("playwright", "playwright", "Web automation library for data extraction", "xpath"),  
-            ("googletrans", "googletrans==4.0.0-rc1", "Google Translate API client", "optional"),
+            ("playwright", "playwright", "Web automation library for data extraction", "xpath"),
+            ("googletrans", "googletrans==4.0.0-rc1", "Google Translate API client - Honestly, dont use it. The Translations are Terrible", "optional"),
             ("shiboken6", "shiboken6", "Qt6 Python bindings support", "optional"),
         ]
 
@@ -76,7 +76,7 @@ class StartupScreen(QDialog):
 
         self.setWindowTitle(tr("FFSessionTool - Startup Configuration", "Startup"))
         self.setModal(True)
-        self.resize(850, 650)
+        self.resize(850, 900)
         self.setWindowFlags(self.windowFlags() & ~Qt.WindowContextHelpButtonHint)
 
         self._init_ui()
@@ -130,19 +130,19 @@ class StartupScreen(QDialog):
         button_layout = QHBoxLayout()
         button_layout.setObjectName("button_layout")
 
-        # Install selected packages button
+        # Install selected packages button (only visible on package tab)
         self.install_selected_button = QPushButton(tr("Install Selected Packages", "Startup"))
         self.install_selected_button.setIcon(load_icon("download"))
         self.install_selected_button.clicked.connect(self._install_selected_packages)
         self.install_selected_button.setEnabled(False)
 
-        # Playwright browsers button
+        # Playwright browsers button (only visible on package tab)
         self.playwright_install_button = QPushButton(tr("Install Playwright Browsers", "Startup"))
         self.playwright_install_button.setIcon(load_icon("download"))
         self.playwright_install_button.clicked.connect(self._install_playwright_browsers)
         self.playwright_install_button.setEnabled(False)
 
-        # Select/Deselect all buttons for optional packages
+        # Select/Deselect all buttons for optional packages (only visible on package tab)
         self.select_all_button = QPushButton(tr("Select All Optional", "Startup"))
         self.select_all_button.setIcon(load_icon("check"))
         self.select_all_button.clicked.connect(self._select_all_optional)
@@ -151,9 +151,20 @@ class StartupScreen(QDialog):
         self.deselect_all_button.setIcon(load_icon("x"))
         self.deselect_all_button.clicked.connect(self._deselect_all_optional)
 
+        # Navigation buttons
+        self.next_button = QPushButton(tr("Next Page", "Startup"))
+        self.next_button.setIcon(load_icon("arrow-badge-right"))
+        self.next_button.clicked.connect(self._next_page)
+
+        self.previous_button = QPushButton(tr("Previous Page", "Startup"))
+        self.previous_button.setIcon(load_icon("arrow-badge-left"))
+        self.previous_button.clicked.connect(self._previous_page)
+        self.previous_button.setVisible(False)  # Hidden on first tab
+
         self.continue_button = QPushButton(tr("Continue to Application", "Startup"))
         self.continue_button.setIcon(load_icon("player-play"))
         self.continue_button.clicked.connect(self._continue_to_app)
+        self.continue_button.setVisible(False)  # Only visible on settings tab
 
         self.exit_button = QPushButton(tr("Exit", "Startup"))
         self.exit_button.setIcon(load_icon("x"))
@@ -165,9 +176,14 @@ class StartupScreen(QDialog):
         button_layout.addWidget(self.playwright_install_button)
         button_layout.addStretch()
         button_layout.addWidget(self.exit_button)
+        button_layout.addWidget(self.previous_button)
+        button_layout.addWidget(self.next_button)
         button_layout.addWidget(self.continue_button)
 
         layout.addLayout(button_layout)
+
+        # Connect tab changed signal to update button visibility
+        self.tab_widget.currentChanged.connect(self._on_tab_changed)
 
     def _create_package_tab(self):
         """Create the package checking tab"""
@@ -223,6 +239,12 @@ class StartupScreen(QDialog):
         """Create the initial settings tab"""
         tab = QWidget()
         layout = QVBoxLayout(tab)
+
+        # Info message
+        info_label = QLabel(tr("Configure application settings before starting. You can modify these later in the application preferences.", "Startup"))
+        info_label.setWordWrap(True)
+        info_label.setStyleSheet("color: #7f8c8d; font-style: italic; margin-bottom: 15px; padding: 10px; background-color: #ecf0f1; border-radius: 4px;")
+        layout.addWidget(info_label)
 
         # Scroll area for settings
         scroll_area = QScrollArea()
@@ -311,13 +333,41 @@ class StartupScreen(QDialog):
         scroll_area.setWidget(settings_widget)
         layout.addWidget(scroll_area)
 
-        # Save settings button
-        save_button = QPushButton(tr("Save Settings", "Startup"))
-        save_button.setIcon(load_icon("device-floppy"))
-        save_button.clicked.connect(self._save_settings)
-        layout.addWidget(save_button)
+        # Auto-save settings button (optional)
+        save_info = QLabel(tr("Settings will be automatically saved when you continue to the application.", "Startup"))
+        save_info.setStyleSheet("color: #27ae60; font-style: italic; padding: 5px;")
+        save_info.setAlignment(Qt.AlignCenter)
+        layout.addWidget(save_info)
 
         return tab
+
+    def _on_tab_changed(self, index):
+        """Handle tab changes to show/hide appropriate buttons"""
+        is_package_tab = (index == 0)
+        is_settings_tab = (index == 1)
+
+        # Show/hide package-related buttons
+        self.install_selected_button.setVisible(is_package_tab)
+        self.playwright_install_button.setVisible(is_package_tab)
+        self.select_all_button.setVisible(is_package_tab)
+        self.deselect_all_button.setVisible(is_package_tab)
+
+        # Show/hide navigation buttons
+        self.previous_button.setVisible(is_settings_tab)
+        self.next_button.setVisible(is_package_tab)
+        self.continue_button.setVisible(is_settings_tab)
+
+    def _next_page(self):
+        """Go to next tab (settings)"""
+        current_index = self.tab_widget.currentIndex()
+        if current_index < self.tab_widget.count() - 1:
+            self.tab_widget.setCurrentIndex(current_index + 1)
+
+    def _previous_page(self):
+        """Go to previous tab (packages)"""
+        current_index = self.tab_widget.currentIndex()
+        if current_index > 0:
+            self.tab_widget.setCurrentIndex(current_index - 1)
 
     def _check_packages(self):
         """Check which packages are installed and create UI"""
@@ -936,11 +986,13 @@ class StartupScreen(QDialog):
                 critical_missing.append(pip_name)
 
         if critical_missing:
+            # Switch back to package tab to show the issue
+            self.tab_widget.setCurrentIndex(0)
             QMessageBox.critical(
                 self,
                 tr("Critical Dependencies Missing", "Startup"),
                 f"{tr('The following critical packages are required:', 'Startup')} {', '.join(critical_missing)}\n\n"
-                f"{tr('Please install them before continuing.', 'Startup')}",
+                f"{tr('Please install them on the Package Dependencies tab before continuing.', 'Startup')}",
             )
             return
 
@@ -961,6 +1013,8 @@ class StartupScreen(QDialog):
             )
 
             if reply == QMessageBox.No:
+                # Switch back to package tab
+                self.tab_widget.setCurrentIndex(0)
                 return
 
         # Save current settings before continuing
