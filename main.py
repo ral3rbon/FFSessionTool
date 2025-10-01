@@ -18,14 +18,6 @@ from app.src.settings import AppSettings
 from app.ui.helpers.ui_themes import theme_manager
 from app.utils.ui_translator import set_language, get_translator
 from setup_screen import StartupScreen
-import sentry_sdk
-
-# sentry_sdk.init(
-#     dsn="https://7bd3a899a6d3a1a7f3ce684945bac2dc@o4510047123472384.ingest.de.sentry.io/4510047126159440",
-#     # Add data like request headers and IP for users,
-#     # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
-#     send_default_pii=True,
-# )
 
 def main():
     app = QApplication(sys.argv)
